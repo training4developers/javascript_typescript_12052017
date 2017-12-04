@@ -1,27 +1,52 @@
-# DemoApp
+# Welcome to Introduction to JavaScript/TypeScript
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
+## Instructor
 
-## Development server
+Eric Greene - [http://t4d.io](http://t4d.io) - [LinkedIn](https://www.linkedin.com/in/ericwgreene)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Schedule
 
-## Code scaffolding
+Class:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Tuesday through Thursday: 9am to 5pm
 
-## Build
+Breaks:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+- Morning Break: 10:25am to 10:35am
+- Lunch: 12pm to 1pm
+- Afternoon Break #1: 1:55pm to 2:05pm
+- Afternoon Break #2: 2:55pm to 3:05pm
+- Afternoon Break #3: 3:55pm to 4:05pm
 
-## Running unit tests
+## Course Outline
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Topic order could be changed.
 
-## Running end-to-end tests
+- Day 1 - JavaScript Types, Variables, Functions, Value-Of-This, Objects, Classes, ES2015 Modules
+- Day 2 - Node.js, Packages + NPM, Asynchronous Programming, Closures, Callbacks, Promises, RxJS, Async/Await
+- Day 3 - Destructuring, Spread, Rest, Map, Set, Generators, Generics, Decorators
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Links
 
-## Further help
+### Instructor's Resources
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [Accelebrate, Inc.](https://www.accelebrate.com/)
+- [Eric's Blog](http://t4d.io/)
+- [WintellectNOW](https://www.wintellectnow.com/Home/Instructor?instructorId=EricGreene) - Special Offer Code: GREENE-2016
+- [Microsoft Virtual Academy](https://mva.microsoft.com/search/SearchResults.aspx#!q=Eric%20Greene&lang=1033)
+
+### Other Resources
+
+- [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+- [JavaScript Air Podcast](http://javascriptair.podbean.com/)
+- [Speaking JavaScript](http://speakingjs.com/es5/)
+
+## Useful Resources
+
+- [TypeScript Coding Guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
+- [Angular Style Guide](https://angular.io/docs/ts/latest/guide/style-guide.html)
+- [Angular Cheat Sheet](https://angular.io/docs/ts/latest/guide/cheatsheet.html)
+- [Angular API](https://angular.io/docs/ts/latest/api/)
+- [Angular Quick Start Project](https://angular.io/docs/ts/latest/quickstart.html)
+- [Angular Webpack Project](https://angular.io/docs/ts/latest/guide/webpack.html)
+- [Angular Class - Angular Webpack Project](https://github.com/AngularClass/angular2-webpack-starter)
