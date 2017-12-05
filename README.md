@@ -13,7 +13,7 @@ Class:
 Breaks:
 
 - Morning Break: 10:25am to 10:35am
-- Lunch: 12pm to 1pm
+- Lunch: 12pm to 1pm 
 - Afternoon Break #1: 1:55pm to 2:05pm
 - Afternoon Break #2: 2:55pm to 3:05pm
 - Afternoon Break #3: 3:55pm to 4:05pm
