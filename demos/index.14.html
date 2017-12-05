@@ -1,0 +1,29 @@
+<script>
+
+  'use strict';
+
+  const firstName = 'Abhilash';
+
+  const propName = 'lastName';
+  const propValue = 'Suresh';
+
+  const person = {
+    _age: 40,
+    firstName,
+    [ propName ]: propValue,
+    getFullName() {
+      return this.firstName + ' ' + this.lastName;
+    },
+    get age() {
+      return this._age;
+    },
+    set age(value) {
+      this._age = value;
+    }
+  }
+
+  person.age = person.age + 1;
+
+
+
+</script>

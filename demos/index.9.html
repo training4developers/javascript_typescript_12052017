@@ -1,0 +1,33 @@
+<script>
+
+  'use strict';
+
+  const sergio = {
+    name: 'Sergio',
+    amt: 100,
+    address: {
+      street: '1600 Pennsylvania Ave.',
+      city: 'Washington, DC',
+    },
+    getRecordInfo: function() {
+      return this.name + ' ' + this.amt;
+    }
+  };
+
+  const sebastian = Object.create(sergio);
+  sebastian.name = 'Sebastian';
+
+  console.log(Object.getPrototypeOf(sebastian) === sergio);
+
+  sergio.amt = 300;
+
+  sebastian.amt = 15;
+  //delete sebastian.amt;
+
+  console.log(sebastian.amt);
+  sebastian.address.city = 'Paris, TX';
+
+  console.dir(sebastian);
+
+
+</script>

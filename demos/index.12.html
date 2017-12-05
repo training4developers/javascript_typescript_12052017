@@ -1,0 +1,45 @@
+<script>
+
+  'use strict';
+
+  const person = {
+    firstName: 'Bob',
+    lastName: 'Smith',
+  };
+
+  person.age = 60;
+
+  delete person.age;
+
+  console.log(person.firstName);
+  console.log(person["firstName"]);
+
+  person["this is not a valid variable name"] = "some value";
+
+  person[0] = 'a number';
+
+  console.log(person['0']);
+
+  person[{}] = "using an object as a property name";
+
+  // goes up the prototype chain
+  console.log('firstName' in person);
+
+  // checks the immediate object only
+  console.log(person.hasOwnProperty('firstName'));
+
+  // properties, keys, index, fields, attributes
+  console.log(Object.keys(person));
+
+  const myObj = Object.create(null);
+  console.dir(myObj);
+  console.dir({});
+
+
+  // const myMap = new Map();
+  // myMap.set({ id: 2 }, "some value");
+  // console.dir(myMap);
+
+  //console.dir(person);
+
+</script>

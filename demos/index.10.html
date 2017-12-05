@@ -1,0 +1,62 @@
+<script>
+
+  'use strict';
+
+  class Person {
+
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    getFullName() {
+      return `${this.firstName} ${this.lastName}`;
+    }
+  }
+
+  const person = new Person('Bob', 'Agile Instructor');
+
+  function Person2(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  Person2.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`;
+  };
+
+  const person2 = new Person2('Bob', 'Agile Instructor');
+
+  console.dir(person);
+  console.dir(person2);
+
+
+
+
+
+  // const person2 = new Person('Eric', 'JavaScript Instructor');
+
+  // const prototypeOfPerson = Object.getPrototypeOf(person);
+
+  // const originalGFN = prototypeOfPerson.getFullName;
+
+  // prototypeOfPerson.getFullName = function() {
+  //   originalGFN()
+  // }
+
+  // console.log(person.getFullName());
+  // Person.prototype.getFullName = function() {
+  //   return 'you can take break';
+  // };
+  // console.log(person.getFullName());
+
+
+  // console.log(Object.getPrototypeOf(person) === Object.getPrototypeOf(person2));
+
+  // console.log(person.getFullName === Person.prototype.getFullName);
+
+  // console.dir(person);
+
+  // console.dir(Person);
+
+</script>

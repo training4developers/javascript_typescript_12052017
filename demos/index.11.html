@@ -1,0 +1,97 @@
+<script>
+
+  'use strict';
+
+  class Person {
+
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    getFullName() {
+      return `${this.firstName} ${this.lastName}`;
+    }
+  }
+
+  class Student extends Person {
+
+    constructor(studentId, firstName, lastName) {
+      super(firstName, lastName);
+      this.studentId = studentId;
+    }
+
+    getRecordInfo() {
+      return this.studentId + ' ' + this.lastName + ', ' + this.firstName;
+    }
+  }
+
+  const student = new Student(1, 'Bob', 'Agile Instructor');
+  console.log(student.getRecordInfo())
+  console.log(student.getFullName())
+  console.dir(student);
+
+  function Person2(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  Person2.prototype.getFullName = function() {
+    return `${this.firstName} ${this.lastName}`;
+  };
+
+  function Student2(studentId, firstName, lastName) {
+    this._super(firstName, lastName);
+    this.studentId = studentId;
+  }
+
+  // extends
+  Student2.prototype = Object.create(Person2.prototype);
+  Student2.prototype.constructor = Student2;
+  Student2.prototype._super = Person2;
+
+  Student2.prototype.getRecordInfo = function() {
+    return this.studentId + ' ' + this.lastName + ', ' + this.firstName;
+  };
+
+  const student2 = new Student2(1, 'Bob', 'Agile Instructor');
+  console.log(student2.getRecordInfo())
+  console.log(student2.getFullName())
+  console.dir(student2);
+
+
+  // const person2 = new Person2('Bob', 'Agile Instructor');
+
+  // console.dir(person);
+  // console.dir(person2);
+
+
+
+
+
+  // const person2 = new Person('Eric', 'JavaScript Instructor');
+
+  // const prototypeOfPerson = Object.getPrototypeOf(person);
+
+  // const originalGFN = prototypeOfPerson.getFullName;
+
+  // prototypeOfPerson.getFullName = function() {
+  //   originalGFN()
+  // }
+
+  // console.log(person.getFullName());
+  // Person.prototype.getFullName = function() {
+  //   return 'you can take break';
+  // };
+  // console.log(person.getFullName());
+
+
+  // console.log(Object.getPrototypeOf(person) === Object.getPrototypeOf(person2));
+
+  // console.log(person.getFullName === Person.prototype.getFullName);
+
+  // console.dir(person);
+
+  // console.dir(Person);
+
+</script>

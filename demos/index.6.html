@@ -1,0 +1,17 @@
+<script>
+
+  'use strict';
+
+  function doIt(a = 1, b, ...c) {
+    console.log('did it');
+    console.log(a,b,c);
+    console.log(Array.from(arguments));
+  }
+
+  let h = [ 1, 2, 3, 4, 5, 6 ];
+
+
+  doIt(...h);
+
+
+</script>

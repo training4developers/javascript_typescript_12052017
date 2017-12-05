@@ -1,0 +1,33 @@
+<script>
+
+  'use strict';
+
+  const person = {
+    firstName: 'Bob',
+    lastName: 'Smith',
+  };
+
+  // Object.preventExtensions(person);
+  // console.log(Object.isExtensible(person));
+
+  // Object.seal(person);
+  // console.log(Object.isSealed(person));
+
+  Object.freeze(person);
+  // console.log(Object.isFrozen(person));
+
+  //person.firstName = 'Pratap';
+
+  // const newPerson = Object.assign({}, person, { firstName: 'Pratap' });
+  const newPerson = { ...person };
+  newPerson.firstName = 'Pratap';
+
+  console.dir(person);
+  console.dir(newPerson);
+
+
+  // person.age = 65;
+
+
+
+</script>

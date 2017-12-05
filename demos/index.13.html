@@ -1,0 +1,59 @@
+<script>
+
+  'use strict';
+
+  const person = {};
+
+  person.firstName = 'Timmy Waterfall Instructor';
+
+  const propDesc = Object.getOwnPropertyDescriptor(person, 'firstName');
+
+  propDesc.writable = false;
+  propDesc.enumerable = false;
+
+  Object.defineProperty(person, 'firstName', propDesc);
+
+  // person.firstName = 'Bob Agile Instructor';
+
+  // console.log(Object.keys(person));
+  // console.log(Object.getOwnPropertyNames(person));
+
+Object.defineProperty(person, 'lastName', {
+  configurable: true,
+  enumerable: true,
+  get: function() {
+    console.log('called getter');
+    return this._lastName;
+  },
+  set: function(value) {
+    console.log('called setter');
+    this._lastName = value;
+  }
+});
+
+person.lastName = 'Bob';
+console.log(person.lastName);
+console.log(person._lastName);
+console.dir(person);
+
+class Person {
+
+  constructor(firstName) {
+    this._firstName = firstName;
+  }
+
+  get firstName() {
+    return this._firstName;
+  }
+
+  set firstName(value) {
+    this._firstName = value;
+  }
+
+}
+
+const p = new Person('Bob');
+console.dir(p);
+
+
+</script>
