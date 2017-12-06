@@ -1,0 +1,33 @@
+<script>
+
+  'use strict';
+
+  function Person(fn, ln) {
+    this.fn = fn;
+    this.ln = ln;
+  }
+
+  Person.create = function(name) {
+    return new Person(...name.split(' '));
+  };
+
+  const p = Person.create('Bob Smith');
+
+  class Person2 {
+
+    constructor(fn, ln) {
+      this.fn = fn;
+      this.ln = ln;
+    }
+
+    static create(name) {
+      return new Person2(...name.split(' '));
+    };
+  }
+
+  console.dir(Person);
+  console.dir(Person2);
+
+
+
+</script>

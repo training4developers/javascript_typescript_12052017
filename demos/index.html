@@ -2,32 +2,67 @@
 
   'use strict';
 
-  function Person(fn, ln) {
-    this.fn = fn;
-    this.ln = ln;
-  }
+  class Promise {
 
-  Person.create = function(name) {
-    return new Person(...name.split(' '));
-  };
+    constructor(fn) {
 
-  const p = Person.create('Bob Smith');
+      this.successFns = [];
 
-  class Person2 {
+      const resolveFn = (result) => {
+        this.successFns.forEach(fn => fn(result));
+      };
+      const rejectFn = () => {};
 
-    constructor(fn, ln) {
-      this.fn = fn;
-      this.ln = ln;
+      fn(resolveFn, rejectFn);
+
     }
 
-    static create(name) {
-      return new Person2(...name.split(' '));
-    };
+    then(fn) {
+      this.successFns.push(fn);
+
+      return new Promise()
+    }
+
   }
 
-  console.dir(Person);
-  console.dir(Person2);
+  const seyfaddin = new Promise(function youngLady(resolve, reject) {
+    setTimeout(function() {
+      resolve('she is madly in love with him... he is the one for me!');
+    }, 4000);
+  });
 
+  // seyfaddin.then(function() {
+  //   console.log('do something 1');
+  // });
+
+  // seyfaddin.then(function() {
+  //   console.log('do something 2');
+  // });
+
+
+  seyfaddin.catch(function() {
+
+  }).then(function(results) {
+    console.log(results);
+    console.log('yay she said yes!');
+
+    console.log('finding a place');
+    return new Promise(function findAPlace(resolve) {
+
+      setTimeout(function() {
+        resolve('found a place...');
+      }, 4000);
+    });
+
+
+  }).then(function(result) {
+    console.log(result)
+  }).catch(function(results) {
+    console.log(results);
+    console.log('time to sign up eharmony...');
+  });
+
+  console.log('seyfaddin is waiting...');
 
 
 </script>

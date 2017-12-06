@@ -1,0 +1,25 @@
+<script>
+
+  'use strict';
+
+  function outer() {
+    let t = 2;
+
+    setTimeout(function() {
+      t = 4;
+    }, 0);
+
+    return function inner() {
+      console.log(t);
+    };
+  }
+
+  const fn = outer();
+
+  fn();
+
+  setTimeout(function() {
+    fn();
+  }, 0)
+
+</script>

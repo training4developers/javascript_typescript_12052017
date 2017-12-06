@@ -1,0 +1,72 @@
+<script>
+
+  'use strict';
+
+  // setTimeout(function() {
+  //     console.log('made it here...');
+  //     setTimeout(function() {
+  //           console.log('today is a nice day...');
+  //           setTimeout(function() {
+  //               console.log('sidewalks are nice...');
+  //           }, 1000);
+  //     }, 1000);
+  // }, 2000);
+
+  // console.log('this is fun...');
+
+
+  // db.open(connectionString, function(con) {
+
+  //   con.query("select * from whatever", function(results) {
+
+  //     // iterate results
+  //   });
+
+  // });
+
+  // Instructions: write code to ensure allDone is executed after all four
+  // timeout have completed.
+
+  function allDone() {
+    console.log('all done');
+  }
+
+  let counter = 0;
+
+  counter++;
+  setTimeout(function() {
+    console.log('task 1');
+    counter--;
+    if (counter === 0) {
+      allDone();
+    }
+  }, 2000);
+
+  counter++;
+  setTimeout(function() {
+    console.log('task 2');
+    counter--;
+    if (counter === 0) {
+      allDone();
+    }
+  }, 1000);
+
+  counter++;
+  setTimeout(function() {
+    console.log('task 3');
+    counter--;
+    if (counter === 0) {
+      allDone();
+    }
+  }, 3000);
+
+  counter++;
+  setTimeout(function() {
+    console.log('task 4');
+    counter--;
+    if (counter === 0) {
+      allDone();
+    }
+  }, 2500);
+
+</script>
