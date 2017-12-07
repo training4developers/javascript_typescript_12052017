@@ -1,0 +1,32 @@
+<script>
+
+    'use strict';
+
+    function doIt() {
+      console.log(this);
+    }
+
+    doIt();
+    window.doIt();
+
+    const o = {
+      id: 2,
+      doIt: doIt,
+    };
+
+    o.doIt();
+
+    // console.log(doIt === o.doIt);
+
+    function myBind(fn, context) {
+      return function(...params) {
+        fn.apply(context, params);
+      };
+    }
+
+    setTimeout(myBind(o.doIt, o), 2000);
+
+
+
+</script>
+

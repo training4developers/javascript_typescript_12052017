@@ -1,0 +1,46 @@
+<script>
+
+    'use strict';
+
+    // function outer() {
+
+    //   console.log(this);
+
+    //   console.log([1,2,3,4].map((num) => { return num * this.id }));
+    // }
+
+    // const o = {
+    //   id: 2, outer: outer,
+    // };
+
+    // o.outer();
+
+    function* nums() {
+
+      console.log('a');
+      yield 1;
+      console.log('b');
+      yield 2;
+      console.log('c');
+      yield 3;
+
+    }
+
+    const d = nums();
+
+    console.log(d.next());
+    console.log(d.next());
+    console.log(d.next());
+    console.log(d.next());
+
+
+    // for (let num of nums()) {
+    //   console.log(num);
+    // }
+
+
+
+
+
+</script>
+

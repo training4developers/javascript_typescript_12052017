@@ -1,0 +1,40 @@
+<script>
+
+
+  const getData = (url) => {
+
+    return new Promise(resolve => {
+
+      const xhr = new XMLHttpRequest();
+
+      xhr.addEventListener('readystatechange', () => {
+        if (xhr.status === 200 && xhr.readyState === 4) {
+          resolve(JSON.parse(xhr.responseText));
+        }
+      });
+
+      xhr.open('GET', url);
+      xhr.send();
+
+    });
+  };
+
+  // create a get data function using the algorithm above
+  // to return data
+  getData('http://localhost:3050/cars').then(cars => console.log(cars));
+
+
+</script>
+
+<script>
+
+  const getMyLocation = () => {
+    return new Promise(resolve => {
+      navigator.geolocation.getCurrentPosition(position => resolve(position))
+    });
+  }
+
+  getMyLocation().then(position => console.log(position));
+
+</script>
+

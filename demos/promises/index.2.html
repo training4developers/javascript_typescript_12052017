@@ -1,0 +1,30 @@
+<script>
+
+  // const p = new Promise(function(resolve) {
+  //   setTimeout(function() {
+  //     resolve('a')
+  //   }, 2000);
+  // });
+
+  const handleIt = results => console.log('resolved: ' + results)
+
+  const p1 = new Promise(resolve => setTimeout(() => resolve('a'), 2000));
+  const p2 = new Promise(resolve => setTimeout(() => resolve('b'), 4000));
+  const p3 = new Promise((resolve, reject) => setTimeout(() => reject('c'), 6000));
+  const p4 = new Promise(resolve => setTimeout(() => resolve('d'), 8000));
+
+  // p1.then(handleIt);
+  // p2.then(handleIt);
+  // p3.then(handleIt).catch(result => console.log('rejected: ' + result));
+  // p4.then(handleIt);
+
+  Promise.all([p1,p2,p3,p4])
+    .then(results => console.log('all done: ' + results))
+    .catch(results => console.log('error: ' + results));
+
+
+
+
+
+</script>
+

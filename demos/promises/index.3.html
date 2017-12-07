@@ -1,0 +1,9 @@
+<script>
+
+  Promise.race([
+    new Promise(resolve => setTimeout(() => resolve('a'), 3000)),
+    new Promise(resolve => setTimeout(() => resolve('b'), 2000)),
+  ]).then(results => console.log(results));
+
+</script>
+

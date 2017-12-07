@@ -1,0 +1,54 @@
+<script>
+
+  const getData = async (url) => {
+
+    // return new Promise(resolve => {
+
+    //   const xhr = new XMLHttpRequest();
+
+    //   xhr.addEventListener('readystatechange', () => {
+    //     if (xhr.status === 200 && xhr.readyState === 4) {
+    //       resolve(JSON.parse(xhr.responseText));
+    //     }
+    //   });
+
+    //   xhr.open('GET', url);
+    //   xhr.send();
+
+    // });
+
+    const res = await fetch(url);
+    return await res.json();
+
+
+  };
+
+  // const getAllCars = () => {
+  //   return getData('http://localhost:3050/cars')
+  //     .then(cars => cars.map(car => {
+  //       car.make = car.make.toUpperCase();
+  //       return car;
+  //     }));
+  // }
+
+  const getAllCars = async () => {
+
+    try {
+
+      const cars = await getData('http://localhost:3050/cars');
+      
+      return cars.map(car => {
+        car.make = car.make.toUpperCase();
+        return car;
+      });
+
+    } catch(err) {
+      console.log(err);
+    }
+  };
+
+  getAllCars().then(cars => console.log(cars));
+
+
+</script>
+
